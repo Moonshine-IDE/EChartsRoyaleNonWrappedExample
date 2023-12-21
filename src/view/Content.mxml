@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<j:VGroup xmlns:fx="http://ns.adobe.com/mxml/2009"
+		 xmlns:j="library://ns.apache.org/royale/jewel" xmlns:html="library://ns.apache.org/royale/html"
+		 itemsVerticalAlign="itemsCentered" initComplete="onContentInitComplete(event)">
+	<fx:Script>
+	<![CDATA[
+		private var dataSource:Array = [{
+											name: 'Russia',
+											value: 12
+										}, 
+										{
+											name: 'Canada',
+											value: 7
+										}, 
+										{
+											name: 'USA',
+											value: 7
+										}, 
+										{
+											name: 'China',
+											value: 7
+										}, 
+										{
+											name: 'Brazil',
+											value: 6
+										}, 
+										{
+											name: 'Australia',
+											value: 5
+										}, 
+										{
+											name: 'India',
+											value: 2
+										}, 
+										{
+											name: 'Others',
+											value: 55
+										}];
+										
+		private function onContentInitComplete(event:Event):void
+		{
+			var chart:Object = window["echarts"].init(pieChart.element);
+			
+			var option:Object = {
+				title: {
+					text: 'Area of Countries',
+					left: 'center'
+				},
+				legend: {
+					orient: 'vertical',
+					right: 'right'
+				},
+				series: [
+					{
+						name: "",
+						type: "pie",
+						radius: '60%',
+						center: ['50%', '50%'],
+						selectedMode: 'single',
+						data: this.dataSource,
+						label: {
+							/*Model variation includes:
+							{a}: series name.
+							{b}: the name of a data item.
+							{c}: the value of a data item.
+							*/
+							formatter: "{c}"
+						}
+					}
+				]
+			}
+			
+			chart.setOption(option);
+		}				
+	]]>
+</fx:Script>
+	<j:Group id="pieChart" width="700" height="500"/>
+</j:VGroup>
