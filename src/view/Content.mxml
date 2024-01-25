@@ -4,71 +4,62 @@
 		 itemsVerticalAlign="itemsCentered" initComplete="onContentInitComplete(event)">
 	<fx:Script>
 	<![CDATA[
-		private var dataSource:Array = [
-										{
-											name: 'Canada',
-											value: 7
-										}, 
-										{
-											name: 'USA',
-											value: 7
-										}, 
-										{
-											name: 'China',
-											value: 7
-										}, 
-										{
-											name: 'Brazil',
-											value: 6
-										}, 
-										{
-											name: 'Australia',
-											value: 5
-										}, 
-										{
-											name: 'India',
-											value: 2
-										}, 
-										{
-											name: 'Others',
-											value: 55
-										}];
+		import org.apache.royale.jewel.Snackbar;
+		import org.apache.royale.net.events.FaultEvent;
+
+		import view.services.PieChartServices;
+
+		private var service:PieChartServices;
+		private var dataSource:Array;
 										
 		private function onContentInitComplete(event:Event):void
 		{
-			var chart:Object = window["echarts"].init(pieChart.element);
-			
-			var option:Object = {
-				title: {
-					text: 'Area of Countries',
-					left: 'center'
-				},
-				legend: {
-					orient: 'vertical',
-					right: 'right'
-				},
-				series: [
-					{
-						name: "",
-						type: "pie",
-						radius: '60%',
-						center: ['50%', '50%'],
-						selectedMode: 'single',
-						data: this.dataSource,
-						label: {
-							/*Model variation includes:
-							{a}: series name.
-							{b}: the name of a data item.
-							{c}: the value of a data item.
-							*/
-							formatter: "{c}"
+			service = new PieChartServices();
+			service.getPieChartData(onPieChartData, onPieChartFault);
+		}		
+		
+		private function onPieChartData(event:Event):void
+		{
+			var dataDoc:Object = JSON.parse(event.target.data);
+				dataSource = dataDoc.documents;
+				
+				var option:Object = {
+					title: {
+						text: 'Area of Countries',
+						left: 'center'
+					},
+					legend: {
+						orient: 'vertical',
+						right: 'right'
+					},
+					series: [
+						{
+							name: "",
+							type: "pie",
+							radius: '60%',
+							center: ['50%', '50%'],
+							selectedMode: 'single',
+							data: dataSource,
+							label: {
+								/*Model variation includes:
+								{a}: series name.
+								{b}: the name of a data item.
+								{c}: the value of a data item.
+								*/
+								formatter: "{c}"
+							}
 						}
-					}
-				]
-			}
-			
-			chart.setOption(option);
-		}				
+					]
+				}
+								
+				var chart:Object = window["echarts"].init(pieChart.element);
+					chart.setOption(option);
+		}		
+		
+		private function onPieChartFault(event:FaultEvent):void
+		{
+			Snackbar.show(event.message.toLocaleString(), 4000, null);
+		}
 	]]>
 </fx:Script>
 	<j:Group id="pieChart" width="700" height="500"/>
