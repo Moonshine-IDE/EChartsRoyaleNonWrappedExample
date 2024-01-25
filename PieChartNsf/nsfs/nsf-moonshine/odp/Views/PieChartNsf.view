@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<view name="PieChartNsf" bgcolor="white" headerbgcolor="white" marginbgcolor="white" showmargin="true">
+  <code event="selection">
+    <formula>SELECT Form='PieChartNsf'</formula>
+  </code>
+  <actionbar bgcolor="#f0f0f0">
+    <actionbuttonstyle bgcolor="#f0f0f0"/>
+    <action title="New PieChartNsf" icon="30">
+      <code event="click">
+        <formula>@Command([Compose]; "PieChartNsf")</formula>
+      </code>
+    </action>
+    <sharedactionref id="6"/>
+    <sharedactionref id="7"/>
+    <sharedactionref id="8"/>
+    <sharedactionref id="9"/>
+    <sharedactionref id="10"/>
+    <sharedactionref id="11"/>
+    <sharedactionref id="12"/>
+  </actionbar>
+  <column itemname="name" sort="none" categorized="false" twisties="true" width="30">
+    <columnheader title="name"/>
+  </column>
+  <column itemname="value" sort="none" categorized="false" twisties="true" width="30">
+    <columnheader title="value"/>
+  </column>
+</view>

@@ -1,0 +1,23 @@
+<project>
+  <gradleBuild>
+    <option commandLine="clean importAll"/>
+    <actions>
+      <action actionName="Clean" action="clean"/>
+      <action actionName="Publish to Maven Local" action="publishToMavenLocal"/>
+      <action actionName="Clean and Run" action="clean run"/>
+      <action actionName="Clean and Build" action="clean build"/>
+      <action actionName="Import All" action="clean importAll"/>
+    </actions>
+  </gradleBuild>
+  <classpaths>
+    <class path="src/main/java"/>
+  </classpaths>
+  <build>
+    <option mainclass="PieChartNsf_JavaAgents"/>
+    <option mainClassPath=""/>
+  </build>
+  <options>
+    <option jdkType="default-java"/>
+    <option projectType="java-domino"/>
+  </options>
+</project>

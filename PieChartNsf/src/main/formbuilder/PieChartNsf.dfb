@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <form hasWebAccess="false" name="PieChartNsf" dxlGeneratedOn="Wed Jan 10 12:05:45 2024 UTC">
+    <viewName><![CDATA[PieChartNsf]]></viewName>
+    <fields>
+      <field name="name" type="Text" editable="Editable" sortOption="No sorting" isMultiValue="false" isIncludeInView="true">
+        <label><![CDATA[name]]></label>
+        <description><![CDATA[]]></description>
+        <formula><![CDATA[]]></formula>
+      </field>
+      <field name="value" type="Number" editable="Editable" sortOption="No sorting" isMultiValue="false" isIncludeInView="true">
+        <label><![CDATA[value]]></label>
+        <description><![CDATA[]]></description>
+        <formula><![CDATA[]]></formula>
+      </field>
+    </fields>
+  </form>
+</root>
