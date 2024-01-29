@@ -38,8 +38,13 @@ Welcome to the PieChartExample project! This guide will walk you through the set
    - Build PieChart_Royale locally using the latest Apache Royale.
    - Go to `Project -> Deploy to Vagrant Server` and select your server
    - The default URL for accessing your project is: `https://domino.hostname.certifier.com/PieChartRoyale/js-release/index.html`
-5. **Editing Data with Notes**:
-   - Go to your local Notes client and open Notes application at hostname/certifier. Choose PieChartNsf database.
-   - Create new document and add name-value pair. Refresh the browser page and your chnges will be incorporated into the pie chart.
+5. **Adding Data **
+    a. **Editing Data with Notes**:
+       - Go to your local Notes client and open Notes application at hostname/certifier. Choose PieChartNsf database.
+       - Create new document and add name-value pair. Refresh the browser page and your chnges will be incorporated into the pie chart.
+    b. **Import Data from JSON**
+        - Select the PieChartNsf project and run Project > Import Documents
+        - Browse to `PieChartNsf/data/data.json`
+        - Ensure your server is selected and click Submit
 
 And that's it! You've successfully set up the PieChartExample project. If you encounter any issues, please refer to our detailed documentation or reach out to the [community](https://moonshine-ide.topicbox.com/groups/ide) for support. Happy coding!

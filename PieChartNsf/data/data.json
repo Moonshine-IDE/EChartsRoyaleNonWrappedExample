@@ -1,0 +1,89 @@
+{ 
+    "title": "Import test data for pie charts", 
+    "versionjson": "1.0.0", 
+    "steps": [ 
+        { 
+            "title": "--- Import Documents ---", 
+            "databases": [ 
+                { 
+                    "action": "update", 
+                    "filePath": "PieChartNsf.nsf", 
+                    "documents":[
+                        { 
+                            "action": "create", 
+                            "computeWithForm": true,
+                            "items": {
+                                "Form":"PieChartNsf",
+                                "name":"Russia",
+                                "value":12
+                            }
+                        },
+                        { 
+                            "action": "create", 
+                            "computeWithForm": true,
+                            "items": {
+                                "Form":"PieChartNsf",
+                                "name":"Canada",
+                                "value":7
+                            }
+                        },
+                        { 
+                            "action": "create", 
+                            "computeWithForm": true,
+                            "items": {
+                                "Form":"PieChartNsf",
+                                "name":"USA",
+                                "value":7
+                            }
+                        },
+                        { 
+                            "action": "create", 
+                            "computeWithForm": true,
+                            "items": {
+                                "Form":"PieChartNsf",
+                                "name":"China",
+                                "value":7
+                            }
+                        },
+                        { 
+                            "action": "create", 
+                            "computeWithForm": true,
+                            "items": {
+                                "Form":"PieChartNsf",
+                                "name":"Brazil",
+                                "value":6
+                            }
+                        },
+                        { 
+                            "action": "create", 
+                            "computeWithForm": true,
+                            "items": {
+                                "Form":"PieChartNsf",
+                                "name":"Australia",
+                                "value":5
+                            }
+                        },
+                        { 
+                            "action": "create", 
+                            "computeWithForm": true,
+                            "items": {
+                                "Form":"PieChartNsf",
+                                "name":"India",
+                                "value":2
+                            }
+                        },
+                        { 
+                            "action": "create", 
+                            "computeWithForm": true,
+                            "items": {
+                                "Form":"PieChartNsf",
+                                "name":"Others",
+                                "value":55
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
