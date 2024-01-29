@@ -38,4 +38,4 @@ Welcome to the PieChartExample project! This guide will walk you through the set
    - Build PieChart_Royale locally using the latest Apache Royale.
    - Deploy your build to Vagrant.
 
-And that's it! You've successfully set up the PieChartExample project. If you encounter any issues, please refer to our detailed documentation or reach out to the community for support. Happy coding!
+And that's it! You've successfully set up the PieChartExample project. If you encounter any issues, please refer to our detailed documentation or reach out to the [community](https://moonshine-ide.topicbox.com/groups/ide) for support. Happy coding!
