@@ -22,7 +22,7 @@ Welcome to the PieChartExample project! This guide will walk you through the set
 ## Project Setup
 1. **Clone Repository**:
    - In Moonshine IDE, go to `Git -> Manage Repositories` and clone this repository.
-   - Import all three projects into your workspace.
+   - Import all two projects into your workspace.
 2. **Configure PieChartNsf**:
    - Right click PieChartNsf project and go to `Settings/Domino/Target Server` and enter your hostname/certifier.
 
