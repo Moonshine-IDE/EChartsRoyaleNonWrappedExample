@@ -28,7 +28,7 @@
     <option verboseStackTraces="False"/>
     <option linkReport=""/>
     <option es="False"/>
-    <option additional="-theme=${royalelib}/themes/JewelTheme/src/main/resources/defaults.css -html-template=src/resources/jewel-index-template.html"/>
+    <option additional="-theme=${royalelib}/themes/JewelTheme/src/main/resources/defaults.css -html-template=src/resources/jewel-index-template.html -js-dynamic-access-unknown-members=true -debug=false"/>
     <option accessible="False"/>
     <option benchmark="False"/>
     <option useResourceBundleMetadata="True"/>
@@ -47,8 +47,8 @@
   </build>
   <mavenBuild>
     <option mavenBuildPath="."/>
-    <option dominoNotesProgram=""/>
     <option commandLine=""/>
+    <option dominoNotesProgram=""/>
     <option dominoNotesPlatform=""/>
     <option settingsFilePath=""/>
     <actions>
