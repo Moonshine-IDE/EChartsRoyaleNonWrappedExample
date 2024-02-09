@@ -3,22 +3,22 @@
     <class path="src/main"/>
   </classpaths>
   <build>
-    <option linkReport=""/>
     <option additional=""/>
     <option antBuildPath="build/build.xml"/>
+    <option linkReport=""/>
   </build>
   <mavenBuild>
+    <option mavenBuildPath="."/>
     <option dominoNotesProgram=""/>
     <option commandLine="clean install"/>
     <option dominoNotesPlatform=""/>
-    <option mavenBuildPath="."/>
     <option settingsFilePath="%NSFODP_SETTINGS_FILE%"/>
     <actions>
-      <action action="install" actionName="Build"/>
-      <action action="clean package" actionName="Clean and package"/>
-      <action action="clean" actionName="Clean"/>
-      <action action="clean install" actionName="Clean and Build"/>
-      <action action="war:exploded" actionName="Exploded"/>
+      <action actionName="Build" action="install"/>
+      <action actionName="Clean and package" action="clean package"/>
+      <action actionName="Clean" action="clean"/>
+      <action actionName="Clean and Build" action="clean install"/>
+      <action actionName="Exploded" action="war:exploded"/>
     </actions>
   </mavenBuild>
   <hiddenPaths>
@@ -32,10 +32,10 @@
     <option jdkType="jdk-8"/>
   </options>
   <domino>
+    <option targetServer="mars/startcloud"/>
     <option localDatabase="nsfs/nsf-moonshine/target/nsf-moonshine-domino-1.0.0.nsf"/>
     <option targetDatabase="PieChartNsf.nsf"/>
-    <option dominoBaseAgentURL="http://127.0.0.1:8080/PieChartNsf.nsf"/>
-    <option targetServer=""/>
+    <option dominoBaseAgentURL="/PieChartNsf.nsf"/>
   </domino>
   <moonshineRunCustomization>
     <option showHiddenPaths="False"/>
